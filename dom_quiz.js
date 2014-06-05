@@ -2,8 +2,8 @@
 
 var newscore = 0;
 var count = 0;
-var question = document.getElementById('question');
-var answer = document.getElementById('answer');
+var question = document.getElementById("question");
+var answer = document.getElementById("answer"); // input box text for answer
 
 var questionaire = [
 	"What is the first spot on the North Shore?",
@@ -21,8 +21,20 @@ var correctAnswer = [
 	"Sunset",
 	];
 
-  question.innerHTML = "What is the first spot on the North Shore?";
+var i = 0; 
 
-  var submitButton = document.getElementById('submit');
+question.innerHTML = questionaire[i];
 
-});
+submit.onclick = function() {
+
+	if(answer.value == correctAnswer[i]){
+		console.log("That is correct");
+
+	//clear the text box after answer
+	answer.value = null;
+		i++;
+		question.innerHTML = questionaire[i];
+	}
+}
+})();
+
